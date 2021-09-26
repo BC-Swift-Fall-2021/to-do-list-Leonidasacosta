@@ -9,8 +9,6 @@ import UIKit
 
 class ToDoListViewController: UIViewController {
     
-
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     
@@ -22,10 +20,9 @@ class ToDoListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        
         loadData()
-        
     }
+    
     func loadData() {
         let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let documentURL = directoryURL.appendingPathComponent("todos").appendingPathExtension("json")
@@ -34,11 +31,10 @@ class ToDoListViewController: UIViewController {
         let jsonDecoder = JSONDecoder()
         do {
             toDoItems = try jsonDecoder.decode(Array<ToDoItem>.self, from: data)
-            tableView.reloadData()
+            tableView.reloadData() 
         } catch {
             print("😡 ERROR: Could not load data \(error.localizedDescription)")
         }
-        
     }
     
     func saveData() {
