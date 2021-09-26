@@ -14,7 +14,6 @@ class ToDoDetailTableViewController: UITableViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var noteView: UITextView!
     
-
     
     var toDoItem: String!
     

@@ -44,6 +44,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g3R-IB-eYL">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="WIG-tt-6aa">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="bEz-53-Ppw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qto-fC-PyI">
                             <connections>
                                 <segue destination="a8M-WE-eTx" kind="presentation" identifier="AddDetail" id="udJ-sq-7ep"/>
@@ -51,6 +56,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="Qto-fC-PyI" id="7Kt-L7-uC0"/>
                         <outlet property="tableView" destination="BED-ta-u0r" id="giW-VU-LPQ"/>
                     </connections>
                 </viewController>
@@ -63,7 +69,7 @@
             <objects>
                 <tableViewController id="Uw7-DI-Csm" customClass="ToDoDetailTableViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="1I3-Wd-mLs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -202,7 +208,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="twh-c2-Wl7"/>
+        <segue reference="CDq-Zc-FYn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
