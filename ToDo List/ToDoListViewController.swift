@@ -19,6 +19,7 @@ class ToDoListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetail" {
@@ -30,6 +31,7 @@ class ToDoListViewController: UIViewController {
                 tableView.deselectRow(at: selectedIndexPath, animated: true)
             }
         }
+        
     }
     
     @IBAction func unwindFromDetail(segue: UIStoryboardSegue) {
@@ -45,6 +47,7 @@ class ToDoListViewController: UIViewController {
         }
     }
     
+    
 
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
         if tableView.isEditing {
@@ -58,6 +61,7 @@ class ToDoListViewController: UIViewController {
         }
     }
     
+    
 }
 extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,6 +74,7 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = toDoArray[indexPath.row]
         return cell
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             toDoArray.remove(at: indexPath.row)
@@ -81,5 +86,6 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
         toDoArray.remove(at: sourceIndexPath.row)
         toDoArray.insert(itemToMove, at: destinationIndexPath.row)
     }
+    
     
 }
