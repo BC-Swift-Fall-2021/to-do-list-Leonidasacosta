@@ -64,6 +64,7 @@ class ToDoDetailTableViewController: UITableViewController {
     @IBAction func reminderSwitchChanged(_ sender: UISwitch) {
         dateLabel.textColor = (reminderSwitch.isOn ? .black : .gray)
         tableView.beginUpdates()
+        tableView.reloadData()
         tableView.endUpdates()
     }
     
