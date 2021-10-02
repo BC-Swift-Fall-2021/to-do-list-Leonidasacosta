@@ -83,6 +83,7 @@ extension ToDoDetailTableViewController {
             return notesRowHeight
         default:
             return defaultRowHeight
+            
         }
     }
 }

@@ -26,6 +26,7 @@ class ListTableViewCell: UITableViewCell {
             nameLabel.text = toDoItem.name
             checkBoxButton.isSelected = toDoItem.completed
         }
+        
     }
     
     @IBAction func checkToggled(_ sender: UIButton) {
